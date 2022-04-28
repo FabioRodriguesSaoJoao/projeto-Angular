@@ -30,7 +30,7 @@ export class LoginPagComponent implements OnInit {
 
       sessionStorage.setItem('product', JSON.stringify(product));
 
-      this.router.navigateByUrl('product');
+      this.router.navigateByUrl('products');
     }
   }
 }

@@ -3,10 +3,10 @@
     <h3>Bem vindo! Digite seu usuário/senha para acessar o sistema!</h3>
     <div class="card-description" >
         <h3>E-mail ou Login:  
-            <input type="email" placeholder="Digite e-mail ou Login"> 
+            <input type="email"[(ngModel)]="email" placeholder="Digite e-mail ou Login"> 
         </h3> 
         <h3>Senha: 
-            <input type="password"  placeholder="Digite sua senha"> 
+            <input type="password" [(ngModel)]="password" placeholder="Digite sua senha"> 
         </h3> 
         <p class="erro" *ngIf="error">Usuário/senha inválidos, tente novamente!</p>
     </div>

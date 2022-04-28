@@ -209,7 +209,8 @@ export class ProductsService {
   }
 
   getProductsByFilterName(name: string) {
-    return this.products.filter((product) => product.name.toUpperCase().search(name.toUpperCase()) > -1);
+    return this.products.filter(
+      (product) => product.name.toLocaleUpperCase().search(name.toLocaleUpperCase()) > -1);
   }
 
   getProductsByFilterId(id: number) {

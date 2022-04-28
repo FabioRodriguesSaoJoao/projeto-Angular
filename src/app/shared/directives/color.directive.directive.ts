@@ -6,8 +6,9 @@ import { Directive, ElementRef } from '@angular/core';
 export class ColorDirectiveDirective {
 
   constructor(private elementRef: ElementRef) { 
-  elementRef.nativeElement.style.color = 'limegreen';
-  elementRef.nativeElement.style.backgroundColor = 'white';
-  console.log(elementRef.nativeElement); }
+    elementRef.nativeElement.style.color = 'rgb(255, 68, 0)';
+    elementRef.nativeElement.style.backgroundColor = 'white';
+    console.log(elementRef.nativeElement); 
+  }
 
 }

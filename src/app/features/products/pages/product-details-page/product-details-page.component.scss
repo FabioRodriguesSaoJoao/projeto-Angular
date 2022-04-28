@@ -3,3 +3,56 @@ app-footer {
     bottom: 0;
     width: 100%;
 }
+.card {
+    max-width: 230px;
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgb(165, 165, 165);
+    border-radius: 5px 5px;
+    padding: 16px;
+    .card-description {
+        color: black;
+        margin: 20px 10px;
+    }
+    .actions {
+        border-top: 1px solid rgb(165, 165, 165);
+        background-color: black;
+        color: white;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 500px 500px;
+    }
+    
+}
+
+.card:hover {
+    box-shadow: 10px 5px 5px rgb(165, 165, 165);
+}
+
+
+.color-red{
+    background-color: red;
+}
+.color-orange{
+    background-color: orange;
+}
+
+.tint{   color: black;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 500px 500px;
+}
+.details {
+    color: black;
+    background-color: rgb(255, 68, 0);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px 500px;
+    padding: 10px
+}

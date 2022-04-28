@@ -20,7 +20,7 @@ export class ProdutsPageComponent implements OnInit {
   }
   findProductsByFilter(event: any, type: 'Name' | 'Id') {
     const value = event.target.value;
-    const students = type === 'Id' ? this.productService.getProductsByFilterId(value) : this.productService.getProductsByFilterId(value);
+    const students = type === 'Id' ? this.productService.getProductsByFilterId(value) : this.productService.getProductsByFilterName(value);
     if(value.length === 0) {
       return this.filteredProducts = this.products;
     }

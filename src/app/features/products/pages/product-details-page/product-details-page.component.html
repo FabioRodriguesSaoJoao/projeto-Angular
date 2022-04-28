@@ -1,15 +1,17 @@
 <app-header></app-header>
-<div class="card" *ngIf="product && !card">
-    <img width="250px" height="250px"
-    [src]="product?.img">
+<div class="card" *ngIf="product && !card"></div>
+
+<div class="card">
     <div class="card-description">   
+        <img width="200px" height="200px" [src]="product?.img">
         <h2>Detalhes do aluno {{ product?.id}} </h2>
-        <h1>Nome: <b>{{ product.name }}</b></h1>
-        <p>Descrição: {{ product.description }}</p>
-        <p>Quantidade: {{ product.quantity }}</p>
-        <p>Data entrada: {{ product.inclusionDate | date }}</p>
-        <p>Validade: {{ product.Validity| currency: 'BRL'}}</p>
-        <p>Disponivel? <b>{{ product.validRegistration ? 'Sim' : 'Não' }}</b></p>
+        <p>Nome: <b>{{ product?.name }}</b></p>
+        <p>Descrição: {{ product?.description }}</p>
+        <p>Quantidade: {{ product?.quantity }}</p>
+        <p>Data entrada: {{ product?.inclusionDate | date }}</p>
+        <p>Validade: {{ product?.Validity| currency: 'BRL'}}</p>
+        <p>Disponivel? <b>{{ product?.validRegistration ? 'Sim' : 'Não' }}</b></p>
+    </div>
 </div>
-</div>
+
 <app-footer></app-footer>

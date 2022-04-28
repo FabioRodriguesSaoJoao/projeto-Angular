@@ -5,8 +5,8 @@ app-footer {
 }
 
 .card{
-        max-width: 260px;
-        height: 400px;
+        max-width: 300px;
+        height: 430px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -17,8 +17,8 @@ app-footer {
         margin-left: 620px;
         margin-right: 500px;
         margin-bottom: 110px;
-        margin-top: 130px;
-        background-color: limegreen;
+        margin-top: 100px;
+        background-color: rgb(255, 68, 0);
         .card-description {
             color: black;
             margin: 20px 10px;
@@ -53,7 +53,7 @@ app-footer {
         padding-left: 10px;
         width: 230px;
         height: 40px;
-        background-color: rgb(147, 255, 147);
+        background-color: rgb(255, 179, 151);
     }
     
     button{

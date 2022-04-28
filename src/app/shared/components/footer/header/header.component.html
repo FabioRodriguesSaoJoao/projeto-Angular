@@ -1,11 +1,10 @@
 <nav>
-    <h3 appColorDirective> Mercadinho São João </h3>
+    <h3 (click)="navegateByUrl('products')" appColorDirective > Mercadinho São João </h3>
     <ul>
-        <li (click)="navegateByUrl('products')" *ngIf="product" appColorDirective>Home</li>
-        <li (click)="navegateByUrl('create-client')"*ngIf="!product">Cadastrar</li>
+        
+        
         <li (click)="navegateByUrl('create-client')" *ngIf="product">Cadastrar</li>
-        <li (click)="navegateByUrl('login')" *ngIf="!product" appColorDirective>Login</li>
-        <li *ngIf="product" (click)="sair()" appColorDirective>Sair</li>
+        <li (click)="navegateByUrl('login')" *ngIf="!product" >Login</li>
+        <li *ngIf="product" appColorDirective (click)="sair()" >Sair</li>
     </ul>
 </nav>
-

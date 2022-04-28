@@ -12,9 +12,9 @@ export class ProductsComponent implements OnInit {
 
   @Input()
   product?:Product;
-
   @Input()
-  card: boolean = true;
+  card?: boolean = true;
+
   constructor(private productService: ProductsService, 
     private router: Router) { }
 
