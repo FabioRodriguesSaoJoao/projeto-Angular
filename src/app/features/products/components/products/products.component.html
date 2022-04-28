@@ -1,0 +1,22 @@
+<div class="card" *ngIf="product && !card" [ngClass]="{'color-magenta':product?.completed, 'color-blue': !product?.completed}">
+    <img width="200px" height="200px"
+    [src]="product?.img">
+
+<div class="card" *ngIf="product && card">
+    <div class="card-description" >
+    <h1>Nome: {{ product.name }}</h1>
+    <p>Descrição: {{ product.description }}</p>
+    <p>Quantidade: {{ product.quantity }}</p>
+    <p>Data entrada: {{ product.inclusionDate | date }}</p>
+    <h4 class="actions add-to-cart"
+     [ngClass]="{'color-magenta':product?.completed,'color-blue': !product?.completed}">
+        Status:<span (click) ="updatecompleto()"> {{product?.completed}} </span ></h4>
+    <div class="actions remover" (click) ="removeProduct()">Remover produto</div>
+    <button class="actions detalhes" (click) ="productsDetails()" >
+        Detalhes 
+    </button>
+           
+</div>
+</div>
+
+

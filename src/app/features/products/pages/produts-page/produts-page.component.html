@@ -1,0 +1,8 @@
+<app-header></app-header>
+    <div class="search">
+        <h1>Busca de Produtos</h1>
+        <input type="text" placeholder="Digite o nome do produto" (input)="findProductsByFilter($event, 'Name')">
+        <input type="number" placeholder="Digite o id do produto" (input)="findProductsByFilter($event, 'Id')">
+    </div>
+    <app-product-list [products]="filteredProducts"></app-product-list>
+<app-footer></app-footer>

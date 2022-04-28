@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="register-container">
+    <h3>Cadastro de Productos</h3>
+    <form #productForm="ngForm" class="register-form">
+        <div class="form-field">
+            <label class="label-input">Nome do Producto:</label>
+            <input type="text" ngModel placeholder="Digite o nome" name="name" required>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Email:</label>
+            <input type="email" ngModel placeholder="Digite o Email"
+            name="email" required>
+        </div>
+        <!-- <div class="form-field">
+            <label class="label-input">Senha do cliente:</label>
+            <input type="password" ngModel placeholder="Digite a senha"
+            name="password" required>
+        </div> -->
+        <div class="form-field">
+            <label class="label-input">Data de inclusão:</label>
+            <input type="text"
+            name="inclusionDate" [(ngModel)]="product.inclusionDate" disabled>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Quantidade disponivel:</label>
+            <input type="text"
+            name="quantity" [(ngModel)]="product.quantity" disabled>
+        </div>
+        <!-- <div class="form-field">
+            <label class="label-input">Forma de pagamento</label>
+            <select name="formOfPayment" ngModel required>
+                <option value="Cartão debito/credito">Cartão debito/credito</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Boleto">Boleto</option>
+                <option value="Ticket">Ticket</option>
+            </select>
+        </div> -->
+        <div class="action-form">
+            <button
+            class="cadastrarProduto"
+            type="submit"
+            [disabled]="productForm.invalid"
+            (click)="onSubmit(productForm)">Salvar</button>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,22 @@
+<h3 class="search"> <b class="cor" >Data de hoje: {{datadehoje | date:'fullDate'}}</b></h3>
+<h3 class="search">Lista de produtos</h3>
+<div class="search">
+<h4>Busque produtos:
+     <input type="text" placeholder="Digite o nome do produto" (keyup)="seachProduct($event)"> 
+     <input placeholder="Digite o id do produto" (keyup)="findById($event)">
+</h4>
+
+</div>
+<div class="product-container">
+    <div class="container">
+        <app-products 
+        *ngFor="let item of products"
+        [product]="item"></app-products>
+    </div>
+
+</div>
+
+
+<div class="mensagem-busca" [ngClass]="{'color-red':mensagemdeErro}" *ngIf="mensagemdeErro" >
+<h3>"Não existe produtos para essa busca!"</h3>
+</div>
