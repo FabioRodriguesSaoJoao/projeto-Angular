@@ -6,7 +6,6 @@ export interface Product {
     quantity: number;
     inclusionDate: Date | string;
     Validity: string;
-    validRegistration: boolean;
     completed: boolean,
     img: string
 };

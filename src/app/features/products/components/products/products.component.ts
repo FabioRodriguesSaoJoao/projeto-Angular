@@ -29,10 +29,7 @@ export class ProductsComponent implements OnInit {
       this.product.completed = !this.product?.completed;
     }
   }
-  removeProduct(){
-   if (this.product) this.productService.removeByID(this.product.id);
-  }
-
+  
   productsDetails() {
     this.router.navigateByUrl(`/products-details/${this.product?.id}`);
   }

@@ -24,8 +24,4 @@ export class CartService {
   sessionStorage.setItem("carrinho",this.cart.length.toString())
   return ;
 };
-removeByID(id:number){
-  const productsIndex = this.cart.findIndex((product) => product.id === id);
-  return this.cart.splice(productsIndex,1); 
-}
 }
