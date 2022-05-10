@@ -166,7 +166,7 @@ export class ProductsService {
       email: '',
       description: '',
       password: '',
-      quantity: 0,
+      quantity: 20,
       inclusionDate: dateToday,
       Validity: '',
       validRegistration: true,

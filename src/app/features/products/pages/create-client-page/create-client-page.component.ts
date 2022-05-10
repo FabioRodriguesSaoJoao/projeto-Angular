@@ -30,7 +30,7 @@ export class CreateClientPageComponent implements OnInit {
     this.product.password = formValue.password;
     this.product.quantity = formValue.quantity;
     this.productsService.createProduct(this.product);
-    alert('Cliente adicionado com sucesso!');
+    alert('Produto adicionado com sucesso!');
     this.router.navigateByUrl('/products');
   }
 }
