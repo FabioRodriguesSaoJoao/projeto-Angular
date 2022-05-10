@@ -2,17 +2,17 @@ export interface Product {
     id: number;
     name: string;
     description: string;
-    password?: string;
+    Value : number;
     quantity: number;
     inclusionDate: Date | string;
     Validity: string;
     validRegistration: boolean;
     completed: boolean,
-    email:string,
     img: string
 };
 
 export interface Client {
+    id: number;
     name: string;
     email: string;
     password?: string;

@@ -4,13 +4,17 @@
 <div class="card">
     <div class="card-description">   
         <img width="200px" height="200px" [src]="product?.img">
-        <h2>Detalhes do aluno {{ product?.id}} </h2>
-        <p>Nome: <b>{{ product?.name }}</b></p>
-        <p>Descrição: {{ product?.description }}</p>
-        <p>Quantidade: {{ product?.quantity }}</p>
+        <h3>Detalhes do produto {{ product?.id}} </h3>
+        <p> <b>{{ product?.name }}</b></p>
+        <p>{{ product?.description }}</p>
+        <p>Preço: <b>{{ product?.Value | currency: 'BRL' }}</b></p>
+        <p>Quantidade disponivel: {{ product?.quantity }} un.</p>
         <p>Data entrada: {{ product?.inclusionDate | date }}</p>
-        <p>Validade: {{ product?.Validity| currency: 'BRL'}}</p>
-        <p>Disponivel? <b>{{ product?.validRegistration ? 'Sim' : 'Não' }}</b></p>
+        <p>Validade: {{ product?.Validity | date}}</p>
+        <h4 class="tint"
+        [ngClass]="{'color-orange':product?.completed,'color-red': !product?.completed}"
+        (click) ="updatecompleto()">
+        {{ product?.completed?'Disponivel' : 'Indisponivel' }}</h4>
     </div>
 </div>
 

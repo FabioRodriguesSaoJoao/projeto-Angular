@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../models/product.model';
-import { ProductsService } from '../../services/products.service';
+import { ProductsService } from '../../services/product-services/products.service';
 
 @Component({
   templateUrl: './product-details-page.component.html',
@@ -21,8 +21,12 @@ export class ProductDetailsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.activedRoute.params.subscribe((params) => {
-      this.product = this.productService.getProductById(params['id'])
+      this.product = this.productService.getProductById(parseInt(params['id']))
     });
   }
-
+  updatecompleto(){
+    if (this.product) {
+      this.product.completed = !this.product?.completed;
+    }
+  }
 }

@@ -5,9 +5,10 @@ import { ProductsComponent } from './components/products/products.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductDetailsPageComponent } from './pages/product-details-page/product-details-page.component';
 import { RouterModule } from '@angular/router';
-import { CreateClientPageComponent } from './pages/create-client-page/create-client-page.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { FormsModule } from '@angular/forms';
 import { ProdutsPageComponent } from './pages/produts-page/produts-page.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -17,14 +18,15 @@ import { ProdutsPageComponent } from './pages/produts-page/produts-page.componen
     ProductListComponent,
     ProductsComponent,
     ProductDetailsPageComponent,
-    CreateClientPageComponent,
+    CartPageComponent,
     ProdutsPageComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ]
 })
 export class ProductsModule { }

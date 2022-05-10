@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 
 import { LoginModule } from "./features/login/LoginModule";
 import { ProductsModule } from './features/products/products.module';
-
+import { MatSliderModule } from '@angular/material/slider';
 
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 registerLocaleData(localePt); 
 
 @NgModule({
@@ -22,6 +23,8 @@ registerLocaleData(localePt);
     AppRoutingModule,
     ProductsModule,
     LoginModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [
     {

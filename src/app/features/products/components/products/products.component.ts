@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../../models/product.model';
-import { ProductsService } from '../../services/products.service';
+import { CartService } from '../../services/cart-service/cart.service';
+import { ProductsService } from '../../services/product-services/products.service';
+
 
 @Component({
   selector: 'app-products',
@@ -15,8 +17,10 @@ export class ProductsComponent implements OnInit {
   @Input()
   card?: boolean = true;
 
-  constructor(private productService: ProductsService, 
-    private router: Router) { }
+  constructor(
+    private productService: ProductsService, 
+    private router: Router,
+    private cartService :CartService) { }
 
   ngOnInit(): void {
   }
@@ -31,6 +35,12 @@ export class ProductsComponent implements OnInit {
 
   productsDetails() {
     this.router.navigateByUrl(`/products-details/${this.product?.id}`);
+  }
+  addToCart(){
+    if (this.product) {
+      this.cartService.addToCart(this.product);
+      alert('Produto adicionado ao carrinho!')
+    };
   }
 }
 

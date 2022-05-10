@@ -1,10 +1,8 @@
 <nav>
-    <h3 (click)="navegateByUrl('products')" appColorDirective > Mercadinho São João </h3>
+    <h3 (click)="navegateByUrl('products')" appColorDirective > Mini Mercado Online <mat-icon >home</mat-icon> </h3>
     <ul>
-        
-        
-        <li (click)="navegateByUrl('create-client')" *ngIf="product">Cadastrar</li>
-        <li (click)="navegateByUrl('login')" *ngIf="!product" >Login</li>
-        <li *ngIf="product" appColorDirective (click)="sair()" >Sair</li>
+        <li (click)="navegateByUrl('cart')" *ngIf="product">Carrinho<mat-icon >add_shopping_cart</mat-icon></li>
+        <li (click)="navegateByUrl('login')" *ngIf="!product">Login<mat-icon >login</mat-icon></li>
+        <li *ngIf="product" appColorDirective (click)="sair()">Sair<mat-icon >logout</mat-icon></li>
     </ul>
 </nav>

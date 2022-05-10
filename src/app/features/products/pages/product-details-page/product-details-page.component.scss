@@ -5,32 +5,27 @@ app-footer {
 }
 .card {
     max-width: 230px;
-    height: 550px;
+    height: 570px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     flex: 1;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgb(165, 165, 165);
+    box-shadow: 0 4px 8px 0 rgb(133, 133, 255);
     border-radius: 5px 5px;
     padding: 16px;
+    margin-left: 620px;
+    margin-right: 500px;
     .card-description {
         color: black;
         margin: 20px 10px;
     }
-    .actions {
-        border-top: 1px solid rgb(165, 165, 165);
-        background-color: black;
-        color: white;
-        padding: 5px;
-        cursor: pointer;
-        border-radius: 500px 500px;
-    }
+    
     
 }
 
 .card:hover {
-    box-shadow: 10px 5px 5px rgb(165, 165, 165);
+    box-shadow: 10px 5px 5px rgb(133, 133, 255);
 }
 
 
@@ -38,7 +33,7 @@ app-footer {
     background-color: red;
 }
 .color-orange{
-    background-color: orange;
+    background-color: blue;
 }
 
 .tint{   color: black;

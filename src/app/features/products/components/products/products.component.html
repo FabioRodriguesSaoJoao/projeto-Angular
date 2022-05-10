@@ -1,18 +1,18 @@
-<div class="card" *ngIf="product && !card" [ngClass]="{'color-magenta':product?.completed, 'color-blue': !product?.completed}">
+<div class="card" *ngIf="product && !card">
 </div>    
 
 <div class="card" >
     <div class="card-description" >
         <img width="200px" height="200px" [src]="product?.img">
-        <p>Nome: {{ product?.name }}</p>
-        <p>Quantidade: {{ product?.quantity }}</p>
-        <p>Data entrada: {{ product?.inclusionDate | date }}</p>
+        <h3>{{ product?.name }}</h3>
+        <p>Preço: {{ product?.Value | currency: 'BRL'}}</p>        
         <h4 class="tint"
-        [ngClass]="{'color-orange':product?.completed,'color-red': !product?.completed}">
-        Vermelho indisponivel, Laranja disponivel<span (click) ="updatecompleto()"> {{product?.completed}} </span ></h4>
-        <div class="actions" (click) ="removeProduct()">Remover produto</div>    
-        <div class="details" (click) ="productsDetails()" >Detalhes     
-</div>
+        [ngClass]="{'color-orange':product?.completed,'color-red': !product?.completed}"
+        (click) ="updatecompleto()">
+        {{ product?.completed?'Disponivel' : 'Indisponivel' }}</h4>
+        <div class="details" (click) ="productsDetails()" >Detalhes<mat-icon>search</mat-icon></div>
+        <div class="actions" (click)="addToCart()" >Adicionar ao carrinho<mat-icon>add_shopping_cart</mat-icon></div>
+        
            
 </div>
 </div>

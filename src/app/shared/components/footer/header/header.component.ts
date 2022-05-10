@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from 'src/app/features/products/models/product.model';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

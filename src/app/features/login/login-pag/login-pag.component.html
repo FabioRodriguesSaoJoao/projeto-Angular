@@ -1,19 +1,67 @@
 <app-header></app-header>
+<body>
+    <div id="container">
 <div class="card">
     <h3>Bem vindo! Digite seu usuário/senha para acessar o sistema!</h3>
-    <div class="card-description" >
-        <h3>E-mail ou Login:  
+    <div>
+        <div>E-mail ou Login:  
             <input type="email"[(ngModel)]="email" placeholder="Digite e-mail ou Login"> 
-        </h3> 
-        <h3>Senha: 
+        </div> 
+        <div>Senha: 
             <input type="password" [(ngModel)]="password" placeholder="Digite sua senha"> 
-        </h3> 
+        </div> 
         <p class="erro" *ngIf="error">Usuário/senha inválidos, tente novamente!</p>
     </div>
+    
     <h2>
         <button class="primary-button"
             type="button"
             [disabled]="!email || !password" (click)="authenticate()" >Entrar</button>
     </h2>
+    <h3>Cadastre-se</h3>
+    <form #clientForm="ngForm" class="register-form">
+        <div class="form-field">
+            <label class="label-input">Nome do cliente:</label>
+            <input type="text" ngModel placeholder="Digite o nome" name="name" required>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Email:</label>
+            <input type="email" ngModel placeholder="Digite o Email"
+            name="email" required>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Senha do cliente:</label>
+            <input type="password" ngModel placeholder="Digite a senha"
+            name="password" required>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Data de inclusão:</label>
+            <input type="text"
+            name="inclusionDate" [(ngModel)]="client.inclusionDate" disabled>
+        </div>
+        <div class="form-field">
+            <label class="label-input">Seu endereço (para entrega):</label>
+            <input type="text"
+            name="address" [(ngModel)]="client.address" placeholder="Digite seu endereço">
+        </div>
+        <div class="form-field">
+            <label class="label-input">Forma de pagamento</label>
+            <select name="formOfPayment" ngModel required>
+                <option value="Cartão debito/credito">Cartão debito/credito</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Boleto">Boleto</option>
+                <option value="Pix">Pix</option>
+            </select>
+        </div>
+        <div class="action-form">
+            <button
+            
+            type="submit"
+            [disabled]="clientForm.invalid"
+            (click)="onSubmit(clientForm)">Salvar</button>
+        </div>
+    </form>
 </div>
+</div>
+</body>
 <app-footer></app-footer>
